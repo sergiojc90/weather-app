@@ -11,9 +11,10 @@
 <body>
     <header class="header"></header>
     <main class="main">
-        <form class="search-box">
-            <input id = "cityName" type="text" class="city-name" placeholder="City name..." required = "true">
-            <select id = "countries" class = "country-name" required>
+        <div class="search-box">
+            <input id = "cityName" type="text" class="city-name" placeholder="City name..." required>
+            <select id = "countries" class="country-name">
+                <option disabled selected value="">Choose a country</option>
                 <option value="AF">Afghanistan</option>
                 <option value="AX">Åland Islands</option>
                 <option value="AL">Albania</option>
@@ -265,7 +266,7 @@
                 <option value="ZW">Zimbabwe</option>
             </select>
             <button id = "search-btn" class="btn">Search</button>
-        </form>
+        </div>
     </main>
     <footer class="footer"></footer>
     <script src="js/app.js"></script>
