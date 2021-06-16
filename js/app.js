@@ -6,13 +6,18 @@
         const countries = document.getElementById("countries");
 
         // Main events on page load
-        window.addEventListener("onload",getData("london","uk","metric"));
         btn.addEventListener("click",validateData);
+        window.addEventListener("onload",getData("london","uk","metric"));
+        window.addEventListener("keyup", function(event){
+            if (event.keyCode == 13){
+                return validateData();
+            }
+        });
 
         // Function to validate that the user has entered a city and a country.
         // The app requires a country due to the duplicated city names in diferent countries.
         function validateData(){
-            if(cityName.value === "" || countries.value === "") return console.log("Choose a city and a country");
+            if(cityName.value === "" || countries.value === "") return alert("Choose a city and a country");
 
             getData(cityName.value, countries.value,"metric");
         }
