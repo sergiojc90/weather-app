@@ -1,3 +1,10 @@
+:root {
+  --primary-color: #2d4059;
+  --secondary-color: #ea5455;
+  --Aux-color: #f07b3f;
+  --Aux2-color: #ffd460;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,4 +13,29 @@
 
 html {
   font-size: 62.5%;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.4rem;
+}
+
+.header {
+  padding: 1.5rem;
+  background-color: var(--primary-color);
+}
+
+.search-box {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.city-name,
+.country-name,
+.btn {
+  flex: 1;
 }
