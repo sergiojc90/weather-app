@@ -11,7 +11,7 @@
 <body>
     <header class="header"></header>
     <main class="main">
-        <div class="search-box">
+        <section class="search-box">
             <input id = "cityName" type="text" class="city-name" placeholder="City name..." required>
             <select id = "countries" class="country-name">
                 <option disabled selected value="">Choose a country</option>
@@ -266,7 +266,22 @@
                 <option value="ZW">Zimbabwe</option>
             </select>
             <button id = "search-btn" class="btn">Search</button>
-        </div>
+        </section>
+        <section class = "weather-box">
+            <div class="weather-box--header">
+                <div class="weather-box--header__icon">
+                    <img id="icon" src="" alt="Wheather icon">
+                    <p id="temperature" ></p>
+                </div>
+                <div class="weather-box--city-info">
+                    <h2 id="city"></h2>
+                    <p id="country"></p>
+                </div>
+            </div>
+            <p id="humidity"></p>
+            <p id="wind"></p>
+
+        </section>
     </main>
     <footer class="footer"></footer>
     <script src="js/app.js"></script>
