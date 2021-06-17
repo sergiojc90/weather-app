@@ -7,7 +7,6 @@
 
         // Main events on page load
         btn.addEventListener("click",validateData);
-        units.addEventListener("click",validateData);
         window.addEventListener("onload",getData("london","uk","metric"));
         window.addEventListener("keyup", function(event){
             if (event.keyCode == 13){
