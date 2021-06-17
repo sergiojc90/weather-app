@@ -1,4 +1,4 @@
-# Project: Weather App using https://openweathermap.org/ API
+# Project: Weather App using openweathermap API
 
 Hi!
 
