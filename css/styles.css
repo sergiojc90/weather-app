@@ -64,6 +64,14 @@ body {
   width: 275px;
 }
 
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -135,6 +143,10 @@ body {
   margin-block-end: 1.5rem;
   font-size: 5rem;
   font-weight: 700;
+}
+
+.weather-box--header__icon #temperature:hover {
+  cursor: pointer;
 }
 
 .footer {

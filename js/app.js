@@ -7,6 +7,7 @@
 
         // Main events on page load
         btn.addEventListener("click",validateData);
+        units.addEventListener("click",validateData);
         window.addEventListener("onload",getData("london","uk","metric"));
         window.addEventListener("keyup", function(event){
             if (event.keyCode == 13){
@@ -25,6 +26,7 @@
         // Function to display the weather data in the DOM
         function displayDom(weatherObject) {
             const icon = document.getElementById("icon");
+            const status = document.getElementById("status")
             const temperature = document.getElementById("temperature");
             const city = document.getElementById("city");
             const country = document.getElementById("country");
@@ -33,15 +35,16 @@
 
             // The URL of the icon is provided in https://openweathermap.org/weather-conditions
             icon.src = `https://openweathermap.org/img/wn/${weatherObject.weather[0].icon}@2x.png`;
+            status.textContent = weatherObject.weather[0].main;
+            temperature.textContent = weatherObject.main.temp + "°C";
             city.textContent = weatherObject.name;
             country.textContent = weatherObject.sys.country;
-            temperature.textContent = weatherObject.main.temp + "°C";
             humidity.textContent = "Humidity: " + weatherObject.main.humidity + "%";
             wind.textContent = "Wind: " + weatherObject.wind.speed + "km/h";
         }
 
         // Asyncronous function to fetch API data, it uses the name of a city, the country and the units (metric or imperial)
-        async function getData(cityName,country,units){
+        async function getData(cityName,country,units = "metric"){
             const weatherKey = "c61e36e895bb91ce2746c1c42d97aa6f";
             const response = await fetch(`https://api.openweathermap.org/data/2.5/find?q=${cityName},${country}&units=${units}&appid=${weatherKey}`);
             
