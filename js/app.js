@@ -32,7 +32,7 @@
             const wind = document.getElementById("wind");
 
             // The URL of the icon is provided in https://openweathermap.org/weather-conditions
-            icon.src = `http://openweathermap.org/img/wn/${weatherObject.weather[0].icon}@2x.png`;
+            icon.src = `https://openweathermap.org/img/wn/${weatherObject.weather[0].icon}@2x.png`;
             city.textContent = weatherObject.name;
             country.textContent = weatherObject.sys.country;
             temperature.textContent = weatherObject.main.temp + "°C";
