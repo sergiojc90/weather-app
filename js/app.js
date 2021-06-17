@@ -43,7 +43,7 @@
         // Asyncronous function to fetch API data, it uses the name of a city, the country and the units (metric or imperial)
         async function getData(cityName,country,units){
             const weatherKey = "c61e36e895bb91ce2746c1c42d97aa6f";
-            const response = await fetch(`http://api.openweathermap.org/data/2.5/find?q=${cityName},${country}&units=${units}&appid=${weatherKey}`);
+            const response = await fetch(`https://api.openweathermap.org/data/2.5/find?q=${cityName},${country}&units=${units}&appid=${weatherKey}`);
             
             //Basic request status validation, if the status is not 200 OK, there is going to be a alert for the user and the function is going to stop execution
             if(response.status !== 200) return alert("Ooops, something went wrong, try again")
