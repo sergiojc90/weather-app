@@ -13,7 +13,7 @@
 <body>
     <header class="header">
         <section class="search-box">
-            <input id = "cityName" type="text" class="city-name" placeholder="City name..." required>
+            <input id = "cityName" type="text" class="city-name" placeholder="Enter a city..." required>
             <select id = "countries" class="country-name">
                 <option disabled selected value="">Choose a country</option>
                 <option value="AF">Afghanistan</option>
@@ -264,27 +264,29 @@
                 <option value="ZW">Zimbabwe</option>
             </select>
             <button id = "search-btn" class="btn">Search</button>
+            <img class="search-box__log" src="" alt="">
         </section>
     </header>
     <main class="main">
         
         <section class = "weather-box">
             <div class="weather-box--header">
+                <div class="weather-box--city-info">
+                    <h2 id="city"></h2>
+                    <H2 id="country"></H2>
+                </div>
                 <div class="weather-box--header__icon">
                     <img id="icon" src="" alt="Wheather icon">
                     <p id="temperature" ></p>
                 </div>
-                <div class="weather-box--city-info">
-                    <h2 id="city"></h2>
-                    <p id="country"></p>
-                </div>
             </div>
             <p id="humidity"></p>
             <p id="wind"></p>
-
         </section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+            Design by <a class="footer__design" href="https://github.com/sergiojc90" target="_blank">Sergio Juárez</a>
+    </footer>
     <script src="js/app.js"></script>
 </body>
 </html>

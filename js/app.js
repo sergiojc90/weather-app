@@ -35,7 +35,7 @@
             icon.src = `http://openweathermap.org/img/wn/${weatherObject.weather[0].icon}@2x.png`;
             city.textContent = weatherObject.name;
             country.textContent = weatherObject.sys.country;
-            temperature.textContent = "Temperature: " + weatherObject.main.temp + "°C";
+            temperature.textContent = weatherObject.main.temp + "°C";
             humidity.textContent = "Humidity: " + weatherObject.main.humidity + "%";
             wind.textContent = "Wind: " + weatherObject.wind.speed + "km/h";
         }
