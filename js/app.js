@@ -4,6 +4,8 @@
         const btn = document.getElementById("search-btn");
         const cityName = document.getElementById("cityName");
         const countries = document.getElementById("countries");
+        const section = document.getElementById("weather-box");
+        const loader = document.createElement("div");
 
         // Main events on page load
         btn.addEventListener("click",validateData);
@@ -40,10 +42,15 @@
             country.textContent = weatherObject.sys.country;
             humidity.textContent = "Humidity: " + weatherObject.main.humidity + "%";
             wind.textContent = "Wind: " + weatherObject.wind.speed + "km/h";
+            setTimeout(function(){section.removeChild(section.lastChild);},1000)
+            
         }
 
         // Asyncronous function to fetch API data, it uses the name of a city, the country and the units (metric or imperial)
         async function getData(cityName,country,units = "metric"){
+            loader.classList.add("lds-dual-ring");
+            section.appendChild(loader);
+            
             const weatherKey = "c61e36e895bb91ce2746c1c42d97aa6f";
             const response = await fetch(`https://api.openweathermap.org/data/2.5/find?q=${cityName},${country}&units=${units}&appid=${weatherKey}`);
             
