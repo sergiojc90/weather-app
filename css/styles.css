@@ -145,10 +145,6 @@ body {
   font-weight: 700;
 }
 
-.weather-box--header__icon #temperature:hover {
-  cursor: pointer;
-}
-
 .footer {
   padding: 20px 0;
   font-size: 1.4rem;
